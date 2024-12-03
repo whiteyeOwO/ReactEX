@@ -1,8 +1,14 @@
 
+import { useEffect } from "react";
 import "./App.css"
 import { IoUmbrellaSharp } from "react-icons/io5";
 
 function App() {
+  useEffect(() => {
+    (async () => {
+      const data = await axios.get("")
+    })()
+  })
 
 
   return (
