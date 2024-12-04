@@ -8,7 +8,7 @@ function App() {
   const [weatherList, setWeatherList] = useState([]);
   useEffect(() => {
     (async () => {
-      const data = await axios.get("https://whiteyeowo.github.io/ReactEX/json/F-C0032-001.json");
+      const data = await axios.get("https://whiteyeowo.github.io/ReactEX/json/F-C0032.json");
 
       const { location } = data.data.cwaopendata.dataset;
       setWeatherList(location);
