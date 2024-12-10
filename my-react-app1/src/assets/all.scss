@@ -1,0 +1,24 @@
+$primary-bg: rgb(195,238,255);
+
+body{
+    background-color: $primary-bg;
+}
+
+.wrap{
+    width: 500px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.anime{
+    width: 500px;
+    height: 300px;
+    display: block;
+    transition: all 0.4s ease ;
+    img{
+        width: 100%;
+    }
+}
+.imgScale{
+    scale: 1.5;
+}

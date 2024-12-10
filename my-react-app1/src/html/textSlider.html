@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./jQuery-ex/jQuery/css/textslider.css">
+    <style>
+        div{
+            height: 1000px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slideText">
+        <ul>
+            <li>news1</li>
+            <li>news2</li>
+            <li>news3</li>
+            <li>news4</li>
+            <li>news5</li>
+            <li>news6</li>
+            <li>news7</li>
+            <li>news8</li>
+            <li>news9</li>
+            <li>news10</li>
+        </ul>
+    </div>
+
+    <script src="./jQuery-ex/jQuery/js/jquery-1.11.3.min.js"></script>
+    <script src="./jQuery-ex/jQuery/js/jquery.textslider.min.js"></script>
+    <script>
+        $(function(){
+            $(".slideText").textslider({
+                direction: "scrollUp",
+                scrollNum: 1,
+                scrollSpeed: 500,
+                pause: 500,
+            });
+        });
+    </script>
+</body>
+
+</html>

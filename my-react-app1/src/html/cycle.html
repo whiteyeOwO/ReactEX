@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 500px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .box{
+            width: 500px;
+            height: 300px;
+            position: relative;
+        }
+        #nav{
+            position: absolute;
+            top: 280px;
+            left:330px;
+            z-index: 99;
+        }
+
+        #nav a{
+            color: white;
+            text-decoration: 0;
+            padding: 3px 8px;
+            margin: 0 3px;
+            border: transparent 2px solid;
+            background-color: transparent;
+            border-radius: 99px;
+            font-family: sans-serif;
+        }
+
+        #nav a:hover{
+            color: white;
+            border: white 2px solid;
+            background-color: transparent;
+        }
+
+        #nav a.activeSlide{
+            background-color: brown;
+        }
+        
+        .mask{
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 98;
+            background-color: hsla(0, 0%, 0%, 0.299);
+            padding:10px;
+            width: 170px;
+            height: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div id="imgCycle">
+            <img src="./jQuery-ex/jQuery/images/image-1.jpg" alt="">
+            <img src="./jQuery-ex/jQuery/images/image-2.jpg" alt="">
+            <img src="./jQuery-ex/jQuery/images/image-3.jpg" alt="">
+            <img src="./jQuery-ex/jQuery/images/image-4.jpg" alt="">
+            <img src="./jQuery-ex/jQuery/images/image-5.jpg" alt="">
+        </div>
+    </div>
+
+    <script src="./jquery-3.7.1.min.js"></script>
+    <script src="./jQuery-ex/jQuery/js/jquery.cycle.all.js"></script>
+    <script>
+        $(function(){
+            $("#imgCycle").after('<nav id="nav" class="mask"></nav>').cycle({
+                fx: "fade",
+                sync: false,
+                delay: -2000,
+                pager: "#nav",
+                timeout: 1500,
+            });
+        });
+    </script>
+</body>
+</html>

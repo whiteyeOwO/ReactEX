@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .anime{
+            width: 500px;
+            height: 300px;
+            display: block;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+        .anime img{
+            width: 100%;
+        }
+        .imgScale{
+            scale: 1.5;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <h2>動態新增刪除類別</h2>
+        <ul>
+            <li>新增 => addClass()</li>
+            <li>刪除 => removeClass()</li>
+        </ul>
+        <hr>
+        <a href="#" class="anime">
+            <img src="./jQuery-ex/jQuery/images/01.jpg" alt="">
+        </a>
+    </div>
+
+    <script src="./jQuery-ex/jQuery/js/jquery-1.11.3.min.js"></script>
+    <script>
+        $(function(){
+            $(".anime").hover(function(){
+                $(this).addClass("imgScale");
+            },function(){
+                $(this).removeClass("imgScale");
+            });
+        });
+    </script>
+</body>
+
+</html>
